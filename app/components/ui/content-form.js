@@ -9,10 +9,16 @@ export default Component.extend({
         }
     }),
 
+    toolbarOptions: [
+        "bold",
+        "italic",
+        "strikeThrough"
+    ],
+
     actions: {
      
       submitForm() {
         const form = this.get('form')
       }
-    }
+    }    
 });
