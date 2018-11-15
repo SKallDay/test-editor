@@ -7,5 +7,12 @@ export default Component.extend({
         return {
             "content": null
         }
-    })
+    }),
+
+    actions: {
+     
+      submitForm() {
+        const form = this.get('form')
+      }
+    }
 });

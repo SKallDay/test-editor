@@ -1,6 +1,14 @@
 <h3>Content-Form</h3>
-<form>
-    {{textarea value=form.content cols="80" rows="6"}}
+<form {{action "submitForm" on="submit"}}>
+    {{froala-editor
+      content=form.content
+      update=(action (mut form.content))
+    }}
+    {{froala-content}}
+
+    <button type="submit" style="margin-top:10px;">
+        Submit Content
+    </button>
 </form>
 
 <h3>Preview</h3>
